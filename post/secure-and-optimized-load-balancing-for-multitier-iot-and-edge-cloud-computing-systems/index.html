@@ -1,0 +1,264 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Secure and Optimized Load Balancing for Multitier IoT and Edge-Cloud Computing Systems | mob的什么都不懂小站</title>
+<link rel="shortcut icon" href="https://mob999.github.io/favicon.ico?v=1717738118142">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://mob999.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Secure and Optimized Load Balancing for Multitier IoT and Edge-Cloud Computing Systems | mob的什么都不懂小站 - Atom Feed" href="https://mob999.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="针对多层物联网和边缘云计算系统的安全和优化的负载平衡
+
+2021-Internet of Things Journal（IOTJ）
+
+Abstract
+
+通过卸载计算密集任务到MEC服务器上，解决用户设备资源不足的情况；
+但是当前大部分卸载..." />
+    <meta name="keywords" content="load balancing" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://mob999.github.io">
+  <img class="avatar" src="https://mob999.github.io/images/avatar.png?v=1717738118142" alt="">
+  </a>
+  <h1 class="site-title">
+    mob的什么都不懂小站
+  </h1>
+  <p class="site-description">
+    mob
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/mob999/" target="_blank">
+          <i class="ri-github-line"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Secure and Optimized Load Balancing for Multitier IoT and Edge-Cloud Computing Systems
+            </h2>
+            <div class="post-info">
+              <span>
+                2024-06-06
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+                <a href="https://mob999.github.io/tag/nGNK5ZSi1/" class="post-tag">
+                  # load balancing
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <h1 id="针对多层物联网和边缘云计算系统的安全和优化的负载平衡">针对多层物联网和边缘云计算系统的安全和优化的负载平衡</h1>
+<ul>
+<li>2021-Internet of Things Journal（IOTJ）</li>
+</ul>
+<h2 id="abstract">Abstract</h2>
+<ul>
+<li>通过卸载计算密集任务到MEC服务器上，解决用户设备资源不足的情况；</li>
+<li>但是当前大部分卸载策略都将用户任务卸载到连接的SBS上，会增加延迟和导致过载；</li>
+<li>没有解决信息敏感的安全问题；</li>
+<li>提出一种联合负载均衡和计算卸载的技术，还增加了一个安全层；</li>
+</ul>
+<h2 id="contributions">Contributions</h2>
+<ol>
+<li>提出了一种在SBS之间重新分配用户设备的负载均衡算法，该算法根据其位置、当前用户数量、每个用户任务的CPU周期和上行数据速率，将部分用户移交给最佳可用的SBS；</li>
+<li>引入了一种基于基于心电信号的加密和解密密钥的AES加密技术，以保护数据在传输过程中的脆弱性；</li>
+<li>一个针对多用户、多任务、多层、移动边缘云计算系统结合负载平衡和计算卸载（LBCO）的优化问题，目的是克服资源约束，通过更少的开销。</li>
+<li>设计了一种安全的LBCO算法，该算法提供了全面的细节，以高效的方式和更少的开销获得问题的最优解决方案。</li>
+</ol>
+<h2 id="architecture">Architecture</h2>
+<figure data-type="image" tabindex="1"><img src="https://mob999.github.io/post-images/1717667233771.png" alt="" loading="lazy"></figure>
+<h2 id="goal">Goal</h2>
+<ul>
+<li>减少系统调度和分配多用户任务所需的时间需求和开销。</li>
+</ul>
+<h2 id="load-balancing">Load Balancing</h2>
+<p><img src="https://mob999.github.io/post-images/1717667607944.png" alt="" loading="lazy"><br>
+<img src="https://mob999.github.io/post-images/1717667862588.png" alt="" loading="lazy"></p>
+<h2 id="method">Method</h2>
+<ul>
+<li>branch and bound（分支定界法）。</li>
+</ul>
+<h2 id="experiment">Experiment</h2>
+<ul>
+<li>Simulation: Matlab;</li>
+<li>Dataset: ECG-ID database;</li>
+<li>Policies:
+<ol>
+<li>Unsecure LBCO（去除安全层）；</li>
+<li>Secure LBCO；</li>
+<li>CO（不考虑handover）；</li>
+<li>LE（不卸载，均在本地进行）；</li>
+<li>FO（全部卸载）</li>
+</ol>
+</li>
+<li>Metric：System Cost</li>
+</ul>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#%E9%92%88%E5%AF%B9%E5%A4%9A%E5%B1%82%E7%89%A9%E8%81%94%E7%BD%91%E5%92%8C%E8%BE%B9%E7%BC%98%E4%BA%91%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E5%85%A8%E5%92%8C%E4%BC%98%E5%8C%96%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%B9%B3%E8%A1%A1">针对多层物联网和边缘云计算系统的安全和优化的负载平衡</a>
+<ul>
+<li><a href="#abstract">Abstract</a></li>
+<li><a href="#contributions">Contributions</a></li>
+<li><a href="#architecture">Architecture</a></li>
+<li><a href="#goal">Goal</a></li>
+<li><a href="#load-balancing">Load Balancing</a></li>
+<li><a href="#method">Method</a></li>
+<li><a href="#experiment">Experiment</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://mob999.github.io/post/efficient-cache-consistency-management-for-transient-iot-data-in-content-centric-networking/">
+              <h3 class="post-title">
+                Efficient Cache Consistency Management for Transient IoT Data in Content-Centric Networking
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'Ov23lia9okjaGiRy1NL9',
+    clientSecret: 'a69c8d8bbafc79ba98c9ff722a10dcbfdd916674',
+    repo: 'mob999.github.io',
+    owner: 'mob999',
+    admin: ['mob999'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://mob999.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
