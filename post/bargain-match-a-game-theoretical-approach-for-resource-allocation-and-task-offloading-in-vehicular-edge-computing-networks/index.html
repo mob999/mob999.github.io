@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>BARGAIN-MATCH: A Game Theoretical Approach for Resource Allocation and Task Offloading in Vehicular Edge Computing Networks | mob的什么都不懂小站</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://mob999.github.io/favicon.ico?v=1725979205050">
+<link rel="stylesheet" href="https://mob999.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="BARGAIN-MATCH：车辆边缘计算网络中资源分配和任务卸载的博弈论方法
+
+2024-TMC
+
+Abstract
+
+车辆边缘计算（VEC）需要有效的资源管理和任务卸载方案；
+提出分层框架，协调任务和服务器之间的异构性，以提高资源利用率和..." />
+    <meta name="keywords" content="load balancing" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://mob999.github.io">
+        <img src="https://mob999.github.io/images/avatar.png?v=1725979205050" class="site-logo">
+        <h1 class="site-title">mob的什么都不懂小站</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      mob
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://mob999.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">BARGAIN-MATCH: A Game Theoretical Approach for Resource Allocation and Task Offloading in Vehicular Edge Computing Networks</h2>
+            <div class="post-date">2024-09-02</div>
+            
+            <div class="post-content" v-pre>
+              <h1 id="bargain-match车辆边缘计算网络中资源分配和任务卸载的博弈论方法">BARGAIN-MATCH：车辆边缘计算网络中资源分配和任务卸载的博弈论方法</h1>
+<ul>
+<li>2024-TMC</li>
+</ul>
+<h2 id="abstract">Abstract</h2>
+<ul>
+<li>车辆边缘计算（VEC）需要有效的资源管理和任务卸载方案；</li>
+<li>提出分层框架，协调任务和服务器之间的异构性，以提高资源利用率和服务满意度；</li>
+<li>提出联合资源分配和任务卸载问题（JRATOP），共同优化边缘服务器内部的资源分配和边缘服务器与云服务器之间的负载平衡；</li>
+<li>由于JRATOP是NP困难的，提出BARGAIN-MATCH算法。</li>
+</ul>
+<h2 id="contributions">Contributions</h2>
+<ul>
+<li>提出资源分配和任务卸载的分层架构以协调<strong>任务的时空需求异质性</strong>和<strong>服务的计算异构性</strong>；</li>
+<li>通过联合优化资源分配和定价以及任务卸载策略，提出了联合资源分配和任务卸载问题（JRATOP）， 通过综合VN信道、非正交多址（NOMA）、车辆的移动性、任务的时空异质性等独特特征，从理论上建模的系统效用 、服务器的计算异构性和节点的能源消耗；</li>
+<li>提出由两个模块构成的BARGAIN-MATCH算法：对于边缘服务器内部的资源分配，提出了一种基于博弈论的激励方法，以促进任务和服务器的合作；对于服务器之间的任务卸载，在任务和服务器之间构建了多对一匹配，刺激水平任务卸载的边缘-边缘协作，以及针对垂直任务卸载的边缘-云协作。</li>
+</ul>
+<h2 id="models">Models</h2>
+<ul>
+<li><img src="https://mob999.github.io/post-images/1725241696300.png" alt="" loading="lazy"></li>
+</ul>
+<h2 id="bargain-match">Bargain Match</h2>
+<h3 id="服务器内部的资源分配与定价">服务器内部的资源分配与定价</h3>
+<ul>
+<li>通过分别计算车辆和服务器的效用，获得最优分配和定价策略。</li>
+</ul>
+<h3 id="服务器之间的任务卸载">服务器之间的任务卸载</h3>
+<ul>
+<li>一种基于匹配的方案；</li>
+<li>偏好列表（任务对服务器的偏好，服务器对任务的偏好）；</li>
+<li>一个任务匹配一个服务器，一个服务器匹配多个任务；</li>
+</ul>
+<h3 id="算法流程">算法流程</h3>
+<ul>
+<li><img src="https://mob999.github.io/post-images/1725261844786.png" alt="" loading="lazy"></li>
+</ul>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://mob999.github.io/tag/nGNK5ZSi1/" class="tag">
+                    load balancing
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://mob999.github.io/post/secure-and-optimized-load-balancing-for-multitier-iot-and-edge-cloud-computing-systems/">
+                  <h3 class="post-title">
+                    Secure and Optimized Load Balancing for Multitier IoT and Edge-Cloud Computing Systems
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'Ov23lia9okjaGiRy1NL9',
+        clientSecret: 'a69c8d8bbafc79ba98c9ff722a10dcbfdd916674',
+        repo: 'mob999.github.io',
+        owner: 'mob999',
+        admin: ['mob999'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

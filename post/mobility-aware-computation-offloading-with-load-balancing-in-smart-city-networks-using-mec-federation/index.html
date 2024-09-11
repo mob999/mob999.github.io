@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Mobility-aware Computation Offloading with Load Balancing in Smart City Networks using MEC Federation | mob的什么都不懂小站</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://mob999.github.io/favicon.ico?v=1725979205050">
+<link rel="stylesheet" href="https://mob999.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="使用联合移动边缘计算的智能城市网络中具有负载平衡的移动感知计算卸载
+
+2024-TMC
+
+Abstract
+
+研究联合移动边缘计算中的计算卸载，任务迁移和资源分配问题；
+目标是在企业长期迁移成本预算的约束下，在保持负载平衡的同时，最小化延迟..." />
+    <meta name="keywords" content="load balancing" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://mob999.github.io">
+        <img src="https://mob999.github.io/images/avatar.png?v=1725979205050" class="site-logo">
+        <h1 class="site-title">mob的什么都不懂小站</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      mob
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://mob999.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Mobility-aware Computation Offloading with Load Balancing in Smart City Networks using MEC Federation</h2>
+            <div class="post-date">2024-09-02</div>
+            
+            <div class="post-content" v-pre>
+              <h1 id="使用联合移动边缘计算的智能城市网络中具有负载平衡的移动感知计算卸载">使用联合移动边缘计算的智能城市网络中具有负载平衡的移动感知计算卸载</h1>
+<ul>
+<li>2024-TMC</li>
+</ul>
+<h2 id="abstract">Abstract</h2>
+<ul>
+<li>研究联合移动边缘计算中的计算卸载，任务迁移和资源分配问题；</li>
+<li>目标是在企业长期迁移成本预算的约束下，在保持负载平衡的同时，最小化延迟和资源消耗的加权和；</li>
+<li>两个子问题：
+<ol>
+<li>MDs聚类问题（根据信道增益的差异聚类）；</li>
+<li>联合计算卸载，任务迁移和资源分配问题（基于Lyapunov优化，基于Transformer的移动性预测和基于DDPG的框架）；</li>
+</ol>
+</li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<ul>
+<li>边缘服务器并不一定属于同一个边缘服务提供商（EIP），频繁的任务切换会导致较高的操作成本，所以应该同时考虑MEC联盟的负载均衡和EIP的成本。</li>
+</ul>
+<h2 id="contribution">Contribution</h2>
+<ul>
+<li>定义动态工作环境（即随机信道条件和时变的任务到达）中的计算卸载，任务迁移和资源分配问题。优化的目标是在EIP的长期迁移成本预算的约束下，在保持负载平衡的同时，最小化加权延迟和长期能耗；</li>
+<li><a href="#abstract">见Abstract的两个子问题</a>；</li>
+<li><strong>基于真实世界的数据集</strong>和大量<strong>仿真实验</strong>；</li>
+</ul>
+<h2 id="model">Model</h2>
+<ul>
+<li><img src="https://mob999.github.io/post-images/1725333225819.png" alt="" loading="lazy"></li>
+</ul>
+<h2 id="algorithm">Algorithm</h2>
+<ol>
+<li>MD聚类算法（根据信道增益差异聚类）；</li>
+<li>Lyapunov优化（由于系统的动态性和随机性，引入虚拟赤字队列，保持cost队列的稳定，取得性能和迁移成本的平衡）；</li>
+<li>基于Transformer的移动性预测模型（TMP）：
+<ul>
+<li>根据边缘服务器的历史移动设备数量预测移动设备的数量分布；</li>
+<li>利用改进后的Transformer架构，模型可以有效捕获移动设备移动性数据的时空关联性，提升预测精度；</li>
+<li>模型在云中心离线训练，部署于边缘服务器；</li>
+<li>分为编码器和解码器：<img src="https://mob999.github.io/post-images/1725439660109.png" alt="" loading="lazy"></li>
+</ul>
+</li>
+<li>MDP建模</li>
+</ol>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://mob999.github.io/tag/nGNK5ZSi1/" class="tag">
+                    load balancing
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://mob999.github.io/post/bargain-match-a-game-theoretical-approach-for-resource-allocation-and-task-offloading-in-vehicular-edge-computing-networks/">
+                  <h3 class="post-title">
+                    BARGAIN-MATCH: A Game Theoretical Approach for Resource Allocation and Task Offloading in Vehicular Edge Computing Networks
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'Ov23lia9okjaGiRy1NL9',
+        clientSecret: 'a69c8d8bbafc79ba98c9ff722a10dcbfdd916674',
+        repo: 'mob999.github.io',
+        owner: 'mob999',
+        admin: ['mob999'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

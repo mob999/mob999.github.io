@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Secure and Optimized Load Balancing for Multitier IoT and Edge-Cloud Computing Systems | mob的什么都不懂小站</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://mob999.github.io/favicon.ico?v=1725979205050">
+<link rel="stylesheet" href="https://mob999.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="针对多层物联网和边缘云计算系统的安全和优化的负载平衡
+
+2021-Internet of Things Journal（IOTJ）
+
+Abstract
+
+通过卸载计算密集任务到MEC服务器上，解决用户设备资源不足的情况；
+但是当前大部分卸载..." />
+    <meta name="keywords" content="load balancing" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://mob999.github.io">
+        <img src="https://mob999.github.io/images/avatar.png?v=1725979205050" class="site-logo">
+        <h1 class="site-title">mob的什么都不懂小站</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      mob
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://mob999.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Secure and Optimized Load Balancing for Multitier IoT and Edge-Cloud Computing Systems</h2>
+            <div class="post-date">2024-06-06</div>
+            
+            <div class="post-content" v-pre>
+              <h1 id="针对多层物联网和边缘云计算系统的安全和优化的负载平衡">针对多层物联网和边缘云计算系统的安全和优化的负载平衡</h1>
+<ul>
+<li>2021-Internet of Things Journal（IOTJ）</li>
+</ul>
+<h2 id="abstract">Abstract</h2>
+<ul>
+<li>通过卸载计算密集任务到MEC服务器上，解决用户设备资源不足的情况；</li>
+<li>但是当前大部分卸载策略都将用户任务卸载到连接的SBS上，会增加延迟和导致过载；</li>
+<li>没有解决信息敏感的安全问题；</li>
+<li>提出一种联合负载均衡和计算卸载的技术，还增加了一个安全层；</li>
+</ul>
+<h2 id="contributions">Contributions</h2>
+<ol>
+<li>提出了一种在SBS之间重新分配用户设备的负载均衡算法，该算法根据其位置、当前用户数量、每个用户任务的CPU周期和上行数据速率，将部分用户移交给最佳可用的SBS；</li>
+<li>引入了一种基于基于心电信号的加密和解密密钥的AES加密技术，以保护数据在传输过程中的脆弱性；</li>
+<li>一个针对多用户、多任务、多层、移动边缘云计算系统结合负载平衡和计算卸载（LBCO）的优化问题，目的是克服资源约束，通过更少的开销。</li>
+<li>设计了一种安全的LBCO算法，该算法提供了全面的细节，以高效的方式和更少的开销获得问题的最优解决方案。</li>
+</ol>
+<h2 id="architecture">Architecture</h2>
+<figure data-type="image" tabindex="1"><img src="https://mob999.github.io/post-images/1717667233771.png" alt="" loading="lazy"></figure>
+<h2 id="goal">Goal</h2>
+<ul>
+<li>减少系统调度和分配多用户任务所需的时间需求和开销。</li>
+</ul>
+<h2 id="load-balancing">Load Balancing</h2>
+<p><img src="https://mob999.github.io/post-images/1717667607944.png" alt="" loading="lazy"><br>
+<img src="https://mob999.github.io/post-images/1717667862588.png" alt="" loading="lazy"></p>
+<h2 id="method">Method</h2>
+<ul>
+<li>branch and bound（分支定界法）。</li>
+</ul>
+<h2 id="experiment">Experiment</h2>
+<ul>
+<li>Simulation: Matlab;</li>
+<li>Dataset: ECG-ID database;</li>
+<li>Policies:
+<ol>
+<li>Unsecure LBCO（去除安全层）；</li>
+<li>Secure LBCO；</li>
+<li>CO（不考虑handover）；</li>
+<li>LE（不卸载，均在本地进行）；</li>
+<li>FO（全部卸载）</li>
+</ol>
+</li>
+<li>Metric：System Cost</li>
+</ul>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://mob999.github.io/tag/nGNK5ZSi1/" class="tag">
+                    load balancing
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://mob999.github.io/post/efficient-cache-consistency-management-for-transient-iot-data-in-content-centric-networking/">
+                  <h3 class="post-title">
+                    Efficient Cache Consistency Management for Transient IoT Data in Content-Centric Networking
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'Ov23lia9okjaGiRy1NL9',
+        clientSecret: 'a69c8d8bbafc79ba98c9ff722a10dcbfdd916674',
+        repo: 'mob999.github.io',
+        owner: 'mob999',
+        admin: ['mob999'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
